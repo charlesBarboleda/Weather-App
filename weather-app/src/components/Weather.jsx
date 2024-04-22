@@ -15,7 +15,7 @@ const Weather = ( {weatherData} ) => {
                     </p>
                   </div>
                   <div>
-                    <h1 className="text-4xl font-semibold pb-4">
+                    <h1 className="text-6xl font-bold pb-3">
                         {weatherData.main.temp.toFixed()
                         }°C
                     </h1>
@@ -24,23 +24,23 @@ const Weather = ( {weatherData} ) => {
               </div>
               <div className="w-1/2 flex flex-col justify-between items-end">
                 <div className="relative">
-                  <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="" className="w-[4rem]"/>
+                  <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="" className="w-[4rem] translate-y-[0.7rem] translate-x-[-2rem]"/>
                 </div>
               {weatherData.name !== undefined ? (
                 <div className="flex flex-col justify-evenly my-4 mx-auto text-xs">
                   <div className="flex justify-between">
                     <p>Feels Like</p>
-                    <p className="font-bold w-10 gap-x-8">{weatherData.main.feels_like.toFixed()}°C</p>
+                    <p className="font-bold w-10 gap-x-4">{weatherData.main.feels_like.toFixed()}°C</p>
                   </div>
-                  <div className="flex justify-between gap-x-8">
+                  <div className="flex justify-between gap-x-4">
                     <p>Humidity</p>
                     <p className="font-bold w-10">{weatherData.main.humidity}%</p>
                   </div>
-                  <div className="flex justify-between gap-x-8">
+                  <div className="flex justify-between gap-x-4">
                     <p>Wind Speed</p>
                     <p className="font-bold w-10">{weatherData.wind.speed.toFixed()}KPH </p>
                   </div>
-                  <div className="flex justify-between gap-x-8">
+                  <div className="flex justify-between gap-x-4">
                     <p>Pressure</p>
                     <p className="font-bold w-10">{weatherData.main.pressure}hPa </p>
                   </div>
