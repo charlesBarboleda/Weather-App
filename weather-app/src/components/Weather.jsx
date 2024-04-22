@@ -9,13 +9,19 @@ const Weather = ( {weatherData} ) => {
               <div className="w-1/2 my-4 mx-auto flex justify-between items-center">
                 <div className="flex flex-col items-start justify-between h-full">
                   <div>
-                    <p className="text-xl">
+                    <p className="text-xs translate-x-[-0.9rem] translate-y-[-0.5rem]">
+                      {new Date().toDateString()}
+                    </p>
+                    <p className="text-xl translate-y-[-0.9rem]">
                       {weatherData.name},
                       {weatherData.sys.country}
                     </p>
+                    <p className="text-xs flex justify-start translate-y-[-1.2rem]">
+                      {weatherData.weather[0].description}
+                    </p>
                   </div>
                   <div>
-                    <h1 className="text-5xl font-bold pb-3">
+                    <h1 className="text-5xl font-bold translate-x-[-0.3rem]">
                         {weatherData.main.temp.toFixed()
                         }°C
                     </h1>
