@@ -35,7 +35,7 @@ function App() {
           onChange={(event) => setLocation(event.target.value)}
           onKeyDownCapture={searchLocation} />
       </div>
-      <Weather weatherData = {data} />
+      <Weather weatherData={data} />
       </div>
      
   )

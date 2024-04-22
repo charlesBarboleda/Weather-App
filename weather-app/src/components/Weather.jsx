@@ -15,7 +15,7 @@ const Weather = ( {weatherData} ) => {
                     </p>
                   </div>
                   <div>
-                    <h1 className="text-6xl font-bold pb-3">
+                    <h1 className="text-5xl font-bold pb-3">
                         {weatherData.main.temp.toFixed()
                         }°C
                     </h1>
