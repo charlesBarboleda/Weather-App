@@ -9,46 +9,46 @@ const Weather = ( {weatherData} ) => {
               <div className="w-1/2 my-4 mx-auto flex justify-between items-center">
                 <div className="flex flex-col items-start justify-between h-full">
                   <div>
-                    <p className="text-xs translate-x-[-0.9rem] translate-y-[-0.5rem]">
+                    <p className="text-xs flex">
                       {new Date().toDateString()}
                     </p>
-                    <p className="text-xl translate-y-[-0.9rem]">
+                    <p className="text-xl">
                       {weatherData.name},
                       {weatherData.sys.country}
                     </p>
-                    <p className="text-xs flex justify-start translate-y-[-1.2rem]">
+                    <p className="text-xs flex justify-start">
                       {weatherData.weather[0].description}
                     </p>
                   </div>
                   <div>
-                    <h1 className="text-5xl font-bold translate-x-[-0.3rem]">
+                    <h1 className="text-5xl font-bold">
                         {weatherData.main.temp.toFixed()
                         }°C
                     </h1>
                   </div>
                 </div>
               </div>
-              <div className="w-1/2 flex flex-col justify-between items-end">
-                <div className="relative">
-                  <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="" className="w-[4rem] translate-y-[0.7rem] translate-x-[-2rem]"/>
+              <div className="w-1/2 flex flex-col">
+                <div className="flex justify-center">
+                  <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="" className="flex justify-center w-[4rem]"/>
                 </div>
               {weatherData.name !== undefined ? (
                 <div className="flex flex-col justify-evenly my-4 mx-auto text-xs">
                   <div className="flex justify-between">
                     <p>Feels Like</p>
-                    <p className="font-bold w-10 gap-x-4">{weatherData.main.feels_like.toFixed()}°C</p>
+                    <p className="flex justify-end font-bold w-10">{weatherData.main.feels_like.toFixed()}°C</p>
                   </div>
-                  <div className="flex justify-between gap-x-4">
+                  <div className="flex justify-between">
                     <p>Humidity</p>
-                    <p className="font-bold w-10">{weatherData.main.humidity}%</p>
+                    <p className="flex justify-end  font-bold w-10">{weatherData.main.humidity}%</p>
                   </div>
-                  <div className="flex justify-between gap-x-4">
+                  <div className="flex justify-between">
                     <p>Wind Speed</p>
-                    <p className="font-bold w-10">{weatherData.wind.speed.toFixed()}KPH </p>
+                    <p className="flex justify-end font-bold w-10">{weatherData.wind.speed.toFixed()}KPH </p>
                   </div>
-                  <div className="flex justify-between gap-x-4">
+                  <div className="flex justify-between">
                     <p>Pressure</p>
-                    <p className="font-bold w-10">{weatherData.main.pressure}hPa </p>
+                    <p className="flex justify-end font-bold w-10">{weatherData.main.pressure}hPa </p>
                   </div>
                 </div>
               ): null}
